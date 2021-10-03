@@ -37,7 +37,7 @@ const removeFromDb = id => {
 }
 
 const getStoredCart = () => {
-  const exists = getDb();
+  const exists = getDb();//local storage e kono item thakle setak niye ase
   return exists ? JSON.parse(exists) : {};
 }
 
@@ -45,4 +45,4 @@ const clearTheCart = () => {
   localStorage.removeItem('shopping_cart');
 }
 
-export { addToDb, removeFromDb as deleteFromDb, clearTheCart, getStoredCart }
+export { addToDb, removeFromDb, clearTheCart, getStoredCart }
